@@ -190,7 +190,7 @@ public class MazeCreator
 
         Color goal = new Color(0x60 / 256f, 0x6e / 256f, 0xb2 / 256f);
         _mapCells[Face.bottom][half, half].SetCellColor(goal);
-        _mapCells[Face.bottom][half, half].gameObject.AddComponent<GoalCell>();
+        _mapCells[Face.bottom][half, half].gameObject.transform.GetChild(5).gameObject.AddComponent<GoalCell>();
 
         _findGoal = new FindGoal(_maps, _mapCells, _mazeWidth);
     }
